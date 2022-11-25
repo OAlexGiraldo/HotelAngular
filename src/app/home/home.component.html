@@ -1,0 +1,42 @@
+<header>
+    <app-menu></app-menu>
+</header>
+<main>
+    <section>
+    <div class="banner">
+        <h1 class="text-white fw-bold p-4">Person Resort</h1>
+    </div>
+</section>
+</main>
+
+
+<section>
+    <app-descripcion></app-descripcion>
+</section>
+<section>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 g-3">
+          <div class="col" *ngFor="let habitacion of habitaciones">
+            <div class="card h-100 shadow"> <br>
+                <img src={{habitacion.fotografias[0]}} alt="" class="img-fluid w-100 h-100"><br>
+                <h2 class="text-center fw-bold">{{habitacion.nombre}}</h2>
+                <p class="parrafo">{{habitacion.descripcion}}<p>                                                   
+                  <div class="iconos">
+                    <i class="bi bi-wifi"></i>
+                      <span class="icon_text">WIFI</span><br>
+  
+                      <i class="bi bi-tv"></i>
+                      <span class="icon_text">TV-LCD</span><br>
+  
+                   <i class="bi bi-droplet"></i>
+                      <span class="icon_text">AGUA OZONIZADA</span>        
+                  </div>                                          
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="mt-5">
+    <app-footer></app-footer>
+</footer>
